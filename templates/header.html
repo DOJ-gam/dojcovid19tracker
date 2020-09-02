@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+DOJ COVID-19 Updater
+
+{% endblock title %}
+
+
+
+{% block content %}
+  
+<nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" style="background-color: #717a86;">
+  <div class="container-fluid">
+
+    <div class="navbar-heading">
+      <a class="navbar-brand" href="/">
+        <img src="{{url_for('static', filename = 'images/covid-logo.png')}} " height="80px" alt="Covid-logo"><br>
+        <span style="color: red">DOJ's</span> COVID-19 LIVE UPDATER
+      </a>
+    </div>
+    
+    <div class="doj-menus">
+        <ul class="navbar-nav">
+          <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Advice</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Covid-19 History</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          
+          <!-- <li class="nav-item dropdown">
+            <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">About</a>
+            <ul class="dropdown-menu">
+              <li><a href="#"> ADD</a></li>
+            </ul>
+          </li> -->
+
+        </ul>
+    </div>
+
+    <div class="view-more">
+      <div class="navbar-nav">
+
+        <h3 class="dropdown show">
+          <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">
+            View more Cases
+          </a>
+          <div class="dropdown-menu " >
+                   
+            <a class="dropdown-item" href="/global">Global Stats</a>
+            <a class="dropdown-item" href="/continents/africa">Africa</a>
+            <a class="dropdown-item" href="/continents/europe">Europe</a>
+            <a class="dropdown-item" href="/continents/asia">Asia</a>
+            <a class="dropdown-item" href="/continents/america">America</a>
+            <a class="dropdown-item" href="/continents/north america">North America</a>
+            <a class="dropdown-item" href="/continents/south america">South America</a>
+
+          </div>
+          <div class="col-md-12">
+
+                <form action="/search" class="form-group">
+                    <div>
+                        <input class="form-control text-lg" type="text" placeholder="Search Country" name="country" />
+                    </div>
+                </form>
+                
+            </div>
+
+        </h3>
+
+      </div>
+    
+    </div>
+
+  </div>
+</nav>
+<br>
+
+<!-- <div class="container">
+    
+    <div class="card bg-light">
+        <a href="#">        
+            <h2 class=" text-primary text-center">The Gambia</h2>
+        </a>
+        <img src="https://disease.sh/assets/img/flags/gm.png" height="100px" class="card-img">
+
+        <div class="card-body">
+
+            <div class="row">
+               
+                <div class="col-md-3 "> 
+                    <div class="card bg-light text-center ">
+                        <h4 class="text-secondary">Total</h4>
+                        <h6 class="text-dark">871</h6>
+                    </div>
+                </div>
+
+                <div class="col-md-3 "> 
+                    <div class="card bg-light text-center ">
+                        <h4 class="text-secondary">Active</h4>
+                        <h6 class="text-primary">578</h6>
+                    </div>
+                </div>
+
+                <div class="col-md-3 "> 
+                    <div class="card bg-light text-center ">
+                        <h4 class="text-secondary">Recovered</h4>
+                        <h6 class="text-success">79</h6>
+                    </div>
+                </div>
+
+                <div class="col-md-3 "> 
+                    <div class="card bg-light text-center ">
+                        <h4 class="text-secondary">Deaths</h4>
+                        <h6 class="text-danger">14</h6>
+                    </div>
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<br> -->
+{% endblock content %}
